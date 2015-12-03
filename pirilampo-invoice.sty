@@ -10,6 +10,9 @@
 \definecolor{prlp-gray}{rgb}{0.85,0.85,0.85}
 \definecolor{prlp-gray2}{rgb}{0.89,0.90,0.90}
 
+\usepackage{geometry}
+\geometry{top=1.4cm, bottom=2.0cm, left=1.4cm, right=1.4cm}
+
 \def\@logo{\includegraphics[width=30mm]{logo.png}}
 \newcommand{\logo}[1]{\gdef\@logo{\includegraphics[width=40mm]{#1}}}
 
@@ -20,7 +23,7 @@
         \vspace*{2ex}
         {\scshape{}Issued: \@date}
     \end{center}
-\null\vfill
+% \null\vfill
 }
 
 \usepackage{tabu}

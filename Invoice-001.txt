@@ -24,7 +24,8 @@ Rue des Pompiers, 54 \\
 1200 Bruxelles \\
 VAT BE 0123.456.789
 
-#+latex: \vspace*{1ex}{\color{prlp-gray2}\hrule}
+#+latex: \vspace*{5ex}{\color{prlp-gray2}\hrule}
+# #+latex: \vfill
 
 * Items
 
@@ -64,3 +65,5 @@ Thank you; I really appreciate your business.
 Please send payment within 21 days of receiving this invoice.
 
 # * Notes Visible to Client
+
+#+latex: \vfill

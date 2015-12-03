@@ -7,6 +7,7 @@
 #+OPTIONS:   H:2 num:nil toc:nil
 
 #+LaTeX_CLASS: article
+#+LaTeX_CLASS_OPTIONS: [a4paper]
 #+LaTeX_HEADER: \usepackage{pirilampo-invoice}
 
 * From

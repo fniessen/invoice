@@ -1,0 +1,11 @@
+* Tasks
+
+** TODO [#A] Mettre ligne de header de la table en gras avec background gris
+
+** TODO [#A] Mettre le destinataire à la position de la fenêtre d'une enveloppe
+
+** TODO [#B] Rajouter en petit/gris l'adresse de retour pour le facteur
+
+** TODO [#B] Mettre le total en caractères plus gros (dans la table)
+
+** TODO [#C] Avoir des hlines dashed dans la table du calcul de la taxe

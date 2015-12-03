@@ -1,4 +1,5 @@
 #+TITLE:     Invoice #001
+#+AUTHOR:    Pirilampo BVBA
 #+DATE:      2015-11-30
 #+DESCRIPTION:
 #+KEYWORDS:

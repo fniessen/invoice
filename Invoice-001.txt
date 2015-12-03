@@ -22,6 +22,8 @@ Rue des Pompiers, 54 \\
 1200 Bruxelles \\
 VAT BE 0123.456.789
 
+#+latex: \vspace*{1ex}{\color{prlp-gray2}\hrule}
+
 * Items
 
 # #+ATTR_LaTeX: :environment longtabu :align lXrr
@@ -35,8 +37,8 @@ VAT BE 0123.456.789
 #+name: items
 | Title       | Description of job | Type  | Rate  | Quantity | Sub-total |     |
 |-------------+--------------------+-------+-------+----------+-----------+-----|
-| Consultancy |                    | Timed | 60/hr |        2 | 960.00    | EUR |
-| Training    |                    | Fixed | 500   |      0.5 | 240.00    | EUR |
+| Consultancy |                    | Timed | 60/hr |        2 |    960.00 | EUR |
+| Training    |                    | Fixed | 500   |      0.5 |    240.00 | EUR |
 #+TBLFM: $6=$5*480;%.2f
 
 * Amount Due

@@ -8,12 +8,12 @@
 % \usepackage[rgb]{xcolor}
 \definecolor{prlp-light-gray}{rgb}{0.95,0.96,0.97}
 \definecolor{prlp-gray}{rgb}{0.85,0.85,0.85}
+\definecolor{prlp-gray2}{rgb}{0.89,0.90,0.90}
 
 \def\@logo{\includegraphics[width=30mm]{logo.png}}
 \newcommand{\logo}[1]{\gdef\@logo{\includegraphics[width=40mm]{#1}}}
 
 \renewcommand\maketitle{
-% \begin{alwayssingle}
     \begin{center}
         {\@logo\par}
         {\Huge\bfseries\scshape\@title\par}
@@ -21,7 +21,6 @@
         {\scshape{}Issued: \@date}
     \end{center}
 \null\vfill
-% \end{alwayssingle}
 }
 
 \usepackage{tabu}

@@ -10,6 +10,11 @@
 #+LaTeX_CLASS_OPTIONS: [a4paper,table]
 #+LaTeX_HEADER: \usepackage{pirilampo-invoice}
 
+#+latex: \begin{tikzpicture}[overlay,remember picture]
+#+latex: \draw ($(current page.north west)!0.3535!(current page.south west)$)--++(0.5cm,0cm);
+#+latex: \draw ($(current page.north west)!0.7071!(current page.south west)$)--++(0.5cm,0cm);
+#+latex: \end{tikzpicture}
+
 * From
 
 *Pirilampo BVBA* \\
@@ -18,6 +23,11 @@ Henri Regastraat, 3 \\
 VAT BE 0642.789.702
 
 * To
+
+# Modèles d'enveloppes à fenêtre :
+# - DL, ou C6/5, pour une feuille A4 pliée en trois dans le sens de la hauteur,
+# - C5/6, également pour une feuille A4 pliée en trois dans le sens de la hauteur,
+#   mais légèrement plus grand que le précédent.
 
 #+latex: \begin{textblock}{100}(80,50) % width, left, top
 #+latex: \textblockcolour{prlp-gray96}

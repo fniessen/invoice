@@ -30,6 +30,10 @@
 \begin{document}
 
 \maketitle
+\begin{tikzpicture}[overlay,remember picture]
+\draw ($(current page.north west)!0.3535!(current page.south west)$)--++(0.5cm,0cm);
+\draw ($(current page.north west)!0.7071!(current page.south west)$)--++(0.5cm,0cm);
+\end{tikzpicture}
 
 \section*{From}
 \label{sec:orgheadline1}

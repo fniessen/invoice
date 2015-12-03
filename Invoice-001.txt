@@ -1,0 +1,63 @@
+#+TITLE:     Invoice #001
+#+DATE:      2015-11-30
+#+DESCRIPTION:
+#+KEYWORDS:
+#+LANGUAGE:  en
+#+OPTIONS:   H:2 num:nil toc:nil
+
+#+LaTeX_CLASS: article
+#+LaTeX_HEADER: \usepackage{pirilampo-invoice}
+#+LaTeX_HEADER: \usepackage{tabu}
+
+* From
+
+*Pirilampo BVBA* \\
+Henri Regastraat, 3 \\
+3000 Leuven \\
+VAT BE 0642.789.702
+
+* To
+
+*LaTeX Dev Club* \\
+Rue des Pompiers, 54 \\
+1200 Bruxelles \\
+VAT BE 0123.456.789
+
+* Items
+
+# #+ATTR_LaTeX: :environment longtabu :align lXrr
+# #+BEGIN: clocktable :maxlevel 2 :scope ("~/org/work/Client.org") :block 2015-11 :fileskip0 t :tags "-notbillable" :lang "en" :narrow 80! :indent t
+# #+CAPTION: Clock summary at [2015-12-03 Thu 09:54], for November 2015.
+# | File | Headline       | Time |
+# |------+----------------+------|
+# |      | ALL Total time | 0:00 |
+# #+END:
+
+#+name: items
+| Title       | Description of job | Type  | Rate  | Quantity | Sub-total |     |
+|-------------+--------------------+-------+-------+----------+-----------+-----|
+| Consultancy |                    | Timed | 60/hr |        2 |    960.00 | EUR |
+| Training    |                    | Fixed | 500   |      0.5 |    240.00 | EUR |
+#+TBLFM: $6=$5*480;%.2f
+
+* Amount Due
+
+#+latex: \colorbox{prlp-gray}{\begin{minipage}{7.5cm}
+
+#+ATTR_LaTeX: :environment tabu :align Xrl
+| Sub-total  | 0.00 | EUR |
+|------------+------+-----|
+| Tax @ 21%  | 0.00 | EUR |
+|------------+------+-----|
+| *Amount Due* | 0.00 | *EUR* |
+#+TBLFM: @1$2=remote(items,@3$3);%.2f::@2$2=@1*0.21;%.2f::@3$2=vsum(@1..@-1);%.2f
+
+#+latex: \end{minipage}}
+
+* Terms
+
+Thank you; I really appreciate your business.
+
+Please send payment within 21 days of receiving this invoice.
+
+# * Notes Visible to Client

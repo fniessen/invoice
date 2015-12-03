@@ -1,0 +1,88 @@
+% Indented LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage[french, english]{babel}
+\usepackage{pirilampo-invoice}
+\usepackage{tabu}
+\author{Fabrice Niessen}
+\date{2015-11-30}
+\title{Invoice \#001}
+\hypersetup{
+ pdfauthor={Fabrice Niessen},
+ pdftitle={Invoice \#001},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 25.0.50.1 (Org mode 8.3.2)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+
+\section*{From}
+\label{sec:orgheadline1}
+
+\textbf{Pirilampo BVBA} \\
+Henri Regastraat, 3 \\
+3000 Leuven \\
+VAT BE 0642.789.702
+
+\section*{To}
+\label{sec:orgheadline2}
+
+\textbf{\LaTeX{} Dev Club} \\
+Rue des Pompiers, 54 \\
+1200 Bruxelles \\
+VAT BE 0123.456.789
+
+\section*{Items}
+\label{sec:orgheadline3}
+
+\begin{center}
+\label{tab:orgtable1}
+
+\begin{tabular}{llllrrl}
+Title & Description of job & Type & Rate & Quantity & Sub-total & \\
+\hline
+Consultancy &  & Timed & 60/hr & 2 & 960.00 & EUR\\
+Training &  & Fixed & 500 & 0.5 & 240.00 & EUR\\
+\end{tabular}
+\end{center}
+
+\section*{Amount Due}
+\label{sec:orgheadline4}
+
+\colorbox{prlp-gray}{\begin{minipage}{7.5cm}
+
+\begin{center}
+\begin{tabu}{Xrl}
+Sub-total & 0.00 & EUR\\
+\hline
+Tax @ 21\% & 0.00 & EUR\\
+\hline
+\textbf{Amount Due} & 0.00 & \textbf{EUR}\\
+\end{tabu}
+\end{center}
+
+\end{minipage}}
+
+\section*{Terms}
+\label{sec:orgheadline5}
+
+Thank you; I really appreciate your business.
+
+Please send payment within 21~days of receiving this invoice.
+\end{document}

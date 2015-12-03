@@ -1,0 +1,34 @@
+%% pirilampo-invoice.sty -- LaTeX2e MC article class
+%
+% Copyright (C) 2015 Fabrice Niessen
+
+\ProvidesPackage{pirilampo-invoice}[2015/12/03 v1.0 Pirilampo invoice extesions]
+\NeedsTeXFormat{LaTeX2e}
+
+% \usepackage[rgb]{xcolor}
+\definecolor{prlp-gray}{rgb}{0.95,0.96,0.97}
+
+\renewcommand\maketitle{
+% \begin{alwayssingle}
+    \begin{center}
+        {\Huge\bfseries\scshape\@title\par}
+        % {\vspace*{10mm}\par\@logo\par\vspace*{15mm}}
+        \vspace*{2ex}
+        {ISSUED: \@date}
+    \end{center}
+\null\vfill
+% \end{alwayssingle}
+}
+
+\endinput % very last line
+
+% This is for the sake of Emacs.
+% Local Variables:
+% mode: outline-minor
+% ispell-local-dictionary: "en_US"
+% time-stamp-format: "%:y/%02m/%02d"
+% time-stamp-start: "Provides\\(Class\\|Package\\){[a-zA-Z-]+}\\["
+% time-stamp-end: " "
+% End:
+
+%% pirilampo-invoice.sty ends here

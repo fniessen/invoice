@@ -38,15 +38,16 @@ VAT BE 0123.456.789
 # #+END:
 
 #+name: items
-| Title       | Description of job | Type  | Rate |      | Quantity | Sub-total |   |
-|-------------+--------------------+-------+------+------+----------+-----------+---|
-| Consultancy |                    | Timed |   60 | \EUR/hr |        2 |    960.00 | \EUR |
-| Training    |                    | Fixed |  500 | \EUR    |      0.5 |    240.00 | \EUR |
+#+ATTR_LaTeX: :environment tabu :align lXlrlrrl
+| Title of job | Description of job | Type  | Rate |      | Quantity | Sub-total |   |
+|--------------+--------------------+-------+------+------+----------+-----------+---|
+| Consultancy  | attention          | Timed |   60 | \EUR/hr |    444.0 | 213120.00 | \EUR |
+| Training     | chien méchant      | Fixed |  500 | \EUR    |      0.5 |    240.00 | \EUR |
 #+TBLFM: $7=$6*480;%.2f
 
 * Amount Due
 
-#+latex: \colorbox{prlp-light-gray}{\begin{minipage}{7.5cm}
+#+latex: \hfill\colorbox{prlp-light-gray}{\begin{minipage}{7.5cm}
 
 #+ATTR_LaTeX: :environment tabu :align Xrl
 | /Sub-total/  | 0.00 | \EUR |

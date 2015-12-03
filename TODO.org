@@ -1,5 +1,9 @@
 * Tasks
 
+** TODO [#A] Avoir certains titres invisibles en LaTeX
+
+Entre autres, « To » et « Amount Due ».
+
 ** TODO [#A] Mettre ligne de header de la table en gras avec background gris
 
 ** TODO [#A] Mettre le destinataire à la position de la fenêtre d'une enveloppe

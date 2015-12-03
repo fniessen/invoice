@@ -19,10 +19,16 @@ VAT BE 0642.789.702
 
 * To
 
+#+latex: \begin{textblock}{100}(80,50) % width, left, top
+#+latex: \textblockcolour{prlp-gray96}
+#+latex: \vspace{4mm}
+#+latex: \noindent % Needed so left of paragraph lines up
 *LaTeX Dev Club* \\
 Rue des Pompiers, 54 \\
 1200 Bruxelles \\
 VAT BE 0123.456.789
+#+latex: \vspace{4mm}
+#+latex: \end{textblock}
 
 * Items
 
@@ -49,7 +55,7 @@ VAT BE 0123.456.789
 
 * Amount Due
 
-#+latex: \hfill\colorbox{prlp-light-gray}{\begin{minipage}{7.5cm}
+#+latex: \hfill\colorbox{prlp-gray96}{\begin{minipage}{7.5cm}
 #+ATTR_LaTeX: :environment tabu :align Xrl
 | /Sub-total/  | 0.00 | \EUR |
 |------------+------+---|

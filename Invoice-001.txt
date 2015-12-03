@@ -7,7 +7,6 @@
 
 #+LaTeX_CLASS: article
 #+LaTeX_HEADER: \usepackage{pirilampo-invoice}
-#+LaTeX_HEADER: \usepackage{tabu}
 
 * From
 
@@ -36,18 +35,18 @@ VAT BE 0123.456.789
 #+name: items
 | Title       | Description of job | Type  | Rate  | Quantity | Sub-total |     |
 |-------------+--------------------+-------+-------+----------+-----------+-----|
-| Consultancy |                    | Timed | 60/hr |        2 |    960.00 | EUR |
-| Training    |                    | Fixed | 500   |      0.5 |    240.00 | EUR |
+| Consultancy |                    | Timed | 60/hr |        2 | 960.00    | EUR |
+| Training    |                    | Fixed | 500   |      0.5 | 240.00    | EUR |
 #+TBLFM: $6=$5*480;%.2f
 
 * Amount Due
 
-#+latex: \colorbox{prlp-gray}{\begin{minipage}{7.5cm}
+#+latex: \colorbox{prlp-light-gray}{\begin{minipage}{7.5cm}
 
 #+ATTR_LaTeX: :environment tabu :align Xrl
-| Sub-total  | 0.00 | EUR |
+| /Sub-total/  | 0.00 | EUR |
 |------------+------+-----|
-| Tax @ 21%  | 0.00 | EUR |
+| /Tax @ 21%/  | 0.00 | EUR |
 |------------+------+-----|
 | *Amount Due* | 0.00 | *EUR* |
 #+TBLFM: @1$2=remote(items,@3$3);%.2f::@2$2=@1*0.21;%.2f::@3$2=vsum(@1..@-1);%.2f

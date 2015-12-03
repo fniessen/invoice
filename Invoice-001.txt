@@ -7,7 +7,7 @@
 #+OPTIONS:   H:2 num:nil toc:nil
 
 #+LaTeX_CLASS: article
-#+LaTeX_CLASS_OPTIONS: [a4paper]
+#+LaTeX_CLASS_OPTIONS: [a4paper,table]
 #+LaTeX_HEADER: \usepackage{pirilampo-invoice}
 
 * From
@@ -24,9 +24,6 @@ Rue des Pompiers, 54 \\
 1200 Bruxelles \\
 VAT BE 0123.456.789
 
-#+latex: \vspace*{5ex}{\color{prlp-gray2}\hrule}
-# #+latex: \vfill
-
 * Items
 
 # #+ATTR_LaTeX: :environment longtabu :align lXrr
@@ -37,18 +34,22 @@ VAT BE 0123.456.789
 # |      | ALL Total time | 0:00 |
 # #+END:
 
+#+latex: \extrarowsep=1mm
+
 #+name: items
 #+ATTR_LaTeX: :environment tabu :align lXlrlrrl
-| Title of job | Description of job | Type  | Rate |      | Quantity | Sub-total |   |
-|--------------+--------------------+-------+------+------+----------+-----------+---|
-| Consultancy  | attention          | Timed |   60 | \EUR/hr |    444.0 | 213120.00 | \EUR |
-| Training     | chien méchant      | Fixed |  500 | \EUR    |      0.5 |    240.00 | \EUR |
+| Title of job | Description of job    | Type  | Rate |      | Quantity | Sub-total |   |
+|--------------+-----------------------+-------+------+------+----------+-----------+---|
+| Consultancy  | Attention             | Timed |   60 | \EUR/hr |      2.0 |    960.00 | \EUR |
+| Training     | Chien méchant         | Fixed |  500 | \EUR    |      0.5 |    240.00 | \EUR |
+| Research     | Je vous avais prévenu | Timed |   60 | \EUR/hr |     10.0 |   4800.00 | \EUR |
 #+TBLFM: $7=$6*480;%.2f
+
+# #+latex: \tabureset
 
 * Amount Due
 
 #+latex: \hfill\colorbox{prlp-light-gray}{\begin{minipage}{7.5cm}
-
 #+ATTR_LaTeX: :environment tabu :align Xrl
 | /Sub-total/  | 0.00 | \EUR |
 |------------+------+---|

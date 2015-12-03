@@ -1,5 +1,5 @@
 % Indented LaTeX compiler: pdflatex
-\documentclass[a4paper]{article}
+\documentclass[a4paper,table]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
@@ -47,10 +47,10 @@ Rue des Pompiers, 54 \\
 1200 Bruxelles \\
 VAT BE 0123.456.789
 
-\vspace*{5ex}{\color{prlp-gray2}\hrule}
-
 \section*{Items}
 \label{sec:orgheadline3}
+
+\extrarowsep=1mm
 
 \begin{center}
 \label{tab:orgtable1}
@@ -58,8 +58,9 @@ VAT BE 0123.456.789
 \begin{tabu}{lXlrlrrl}
 Title of job & Description of job & Type & Rate &  & Quantity & Sub-total & \\
 \hline
-Consultancy & attention & Timed & 60 & \texteuro{}/hr & 444.0 & 213120.00 & \texteuro{}\\
-Training & chien méchant & Fixed & 500 & \texteuro{} & 0.5 & 240.00 & \texteuro{}\\
+Consultancy & Attention & Timed & 60 & \texteuro{}/hr & 2.0 & 960.00 & \texteuro{}\\
+Training & Chien méchant & Fixed & 500 & \texteuro{} & 0.5 & 240.00 & \texteuro{}\\
+Research & Je vous avais prévenu & Timed & 60 & \texteuro{}/hr & 10.0 & 4800.00 & \texteuro{}\\
 \end{tabu}
 \end{center}
 
@@ -67,7 +68,6 @@ Training & chien méchant & Fixed & 500 & \texteuro{} & 0.5 & 240.00 & \texteuro
 \label{sec:orgheadline4}
 
 \hfill\colorbox{prlp-light-gray}{\begin{minipage}{7.5cm}
-
 \begin{center}
 \begin{tabu}{Xrl}
 \emph{Sub-total} & 0.00 & \texteuro{}\\

@@ -73,11 +73,14 @@ VAT BE 0123.456.789
 
 #+name: items
 #+ATTR_LaTeX: :environment tabu :align lXlrlrrl
-| Title of job | Description of job    | Type  | Rate |     | Quantity | Sub-total |   |
-|--------------+-----------------------+-------+------+-----+----------+-----------+---|
-| Consultancy  | Attention             | Timed |   60 | \EUR/d |      6.5 | 3120.00   | \EUR |
-| Training     | Chien méchant         | Fixed |  500 | \EUR   |      0.5 | 240.00    | \EUR |
-| Research     | Je vous avais prévenu | Timed |   60 | \EUR/d |     10.0 | 4800.00   | \EUR |
+|              | <60>                                                         |       |      |     |          |           |   |
+| Title of job | Description of job                                           | Type  | Rate |     | Quantity | Sub-total |   |
+|--------------+--------------------------------------------------------------+-------+------+-----+----------+-----------+---|
+| Consultancy  | Creation of a billing invoice template without lots of custom coding and scripting | Timed |  480 | \EUR/d |      6.5 | 3120.00   | \EUR |
+|--------------+--------------------------------------------------------------+-------+------+-----+----------+-----------+---|
+| Training     | Creation of a quote template                                 | Fixed |  500 | \EUR   |      0.5 | 240.00    | \EUR |
+|--------------+--------------------------------------------------------------+-------+------+-----+----------+-----------+---|
+| Research     | Creation of a billing invoice template                       | Timed |  480 | \EUR/d |     10.0 | 4800.00   | \EUR |
 #+TBLFM: $7=$6*480;%.2f
 
 # #+latex: \tabureset
@@ -91,7 +94,7 @@ VAT BE 0123.456.789
 | /Tax @ 21%/  |  655.20 | \EUR |
 |------------+---------+---|
 | *Amount Due* | 3775.20 | *\EUR* |
-#+TBLFM: @1$2=remote(items,@2$7);%.2f::@2$2=@1*0.21;%.2f::@3$2=vsum(@1..@-1);%.2f
+#+TBLFM: @1$2=remote(items,@3$7);%.2f::@2$2=@1*0.21;%.2f::@3$2=vsum(@1..@-1);%.2f
 
 #+latex: \end{minipage}}
 

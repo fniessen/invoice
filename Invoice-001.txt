@@ -65,11 +65,8 @@ VAT BE 0123.456.789
 * Items
 
 # #+ATTR_LaTeX: :environment longtabu :align lXrr
-# #+BEGIN: clocktable :maxlevel 2 :scope ("~/org/work/Client.org") :block 2015-11 :fileskip0 t :tags "-notbillable" :lang "en" :narrow 80! :indent t
-# #+CAPTION: Clock summary at [2015-12-03 Thu 09:54], for November 2015.
-# | File | Headline       | Time |
-# |------+----------------+------|
-# |      | ALL Total time | 0:00 |
+# #+BEGIN: clocktable :maxlevel 2 :scope ("~/org/work/Art-36.org") :block 2015 :fileskip0 t :tags "-notbillable" :lang "en" :narrow 80! :indent t
+# #+CAPTION: Clock summary at [2015-12-04 Fri 13:49], for the year 2015.
 # #+END:
 
 #+latex: \extrarowsep=1mm
@@ -78,7 +75,7 @@ VAT BE 0123.456.789
 #+ATTR_LaTeX: :environment tabu :align lXlrlrrl
 | Title of job | Description of job    | Type  | Rate |     | Quantity | Sub-total |   |
 |--------------+-----------------------+-------+------+-----+----------+-----------+---|
-| Consultancy  | Attention             | Timed |   60 | \EUR/d |      2.0 | 960.00    | \EUR |
+| Consultancy  | Attention             | Timed |   60 | \EUR/d |      6.5 | 3120.00   | \EUR |
 | Training     | Chien méchant         | Fixed |  500 | \EUR   |      0.5 | 240.00    | \EUR |
 | Research     | Je vous avais prévenu | Timed |   60 | \EUR/d |     10.0 | 4800.00   | \EUR |
 #+TBLFM: $7=$6*480;%.2f
@@ -89,11 +86,11 @@ VAT BE 0123.456.789
 
 #+latex: \hfill\colorbox{prlp-gray96}{\begin{minipage}{7.5cm}
 #+ATTR_LaTeX: :environment tabu :align Xrl
-| /Sub-total/  |  960.00 | \EUR |
+| /Sub-total/  | 3120.00 | \EUR |
 |------------+---------+---|
-| /Tax @ 21%/  |  201.60 | \EUR |
+| /Tax @ 21%/  |  655.20 | \EUR |
 |------------+---------+---|
-| *Amount Due* | 1161.60 | *\EUR* |
+| *Amount Due* | 3775.20 | *\EUR* |
 #+TBLFM: @1$2=remote(items,@2$7);%.2f::@2$2=@1*0.21;%.2f::@3$2=vsum(@1..@-1);%.2f
 
 #+latex: \end{minipage}}

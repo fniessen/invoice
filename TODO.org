@@ -1,5 +1,8 @@
 * Tasks
 
+Exemple de facture bien présentée :
+http://www.inboldsolutions.com/fr/online-invoice-creator/
+
 ** TODO [#A] Avoir certains titres invisibles en LaTeX
 
 Entre autres, « To » et « Amount Due ».

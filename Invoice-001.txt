@@ -47,8 +47,10 @@ VAT BE 0642.789.702
 # mm du haut de la page.. (disons 80 pour etre tranquille), et a 95mm du bord
 # gauche..
 
+# https://www.blinksale.com/tour/ !!!!!!!!
+
 #+latex: \begin{textblock}{90}(95,45) % width, left, top
-#+latex: \textblockcolour{prlp-gray96}
+#+latex: \textblockcolour{prlp-yellow}
 #+latex: \vspace{8mm}
 #+latex: \noindent % Needed so left of paragraph lines up
 *LaTeX Dev Club* \\
@@ -98,7 +100,7 @@ VAT BE 0123.456.789
 
 * Terms
 
-*Thank you*; I really appreciate your business.
+*Thank you*; I really appreciate working with you.
 
 Please send payment within *21 days* of receiving this invoice.
 

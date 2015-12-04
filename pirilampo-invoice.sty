@@ -2,7 +2,7 @@
 %
 % Copyright (C) 2015 Fabrice Niessen
 
-\ProvidesPackage{pirilampo-invoice}[2015/12/03 v1.0 Pirilampo invoice extesions]
+\ProvidesPackage{pirilampo-invoice}[2015/12/04 v1.0 Pirilampo invoice extesions]
 \NeedsTeXFormat{LaTeX2e}
 
 \definecolor{prlp-gray96}{rgb}{0.95,0.96,0.97} % Background color.
@@ -23,18 +23,13 @@
 
 \setlength{\parindent}{0mm}
 
-\def\@logo{\includegraphics[width=30mm]{logo.png}}
-\newcommand{\logo}[1]{\gdef\@logo{\includegraphics[width=40mm]{#1}}}
-
 \renewcommand\maketitle{
   \begin{center}
     \color{prlp-blue}
-    {\@logo\par}
     {\Huge\bfseries\scshape\@title\par}
     \vspace*{2ex}
     {\scshape{}Issued: \@date}
   \end{center}
-  % \null\vfill
 }
 
 \usepackage{tabu}

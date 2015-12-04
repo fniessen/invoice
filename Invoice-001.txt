@@ -11,18 +11,28 @@
 #+LaTeX_HEADER: \usepackage{pirilampo-invoice}
 
 #+latex: \begin{tikzpicture}[overlay,remember picture]
-#+latex: \draw ($(current page.north west)!0.3535!(current page.south west)$)--++(0.5cm,0cm);
-#+latex: \draw ($(current page.north west)!0.7071!(current page.south west)$)--++(0.5cm,0cm);
+#+latex: \draw [gray] ($(current page.north west)!0.3535!(current page.south west)$)--++(0.5cm,0cm);
+#+latex: \draw [gray] ($(current page.north west)!0.7071!(current page.south west)$)--++(0.5cm,0cm);
 #+latex: \end{tikzpicture}
 
-* From
+# * From
 
+#+latex: \begin{textblock}{40}(14,18) % width, left, top
+#+latex: \noindent % Needed so left of paragraph lines up
+#+latex:    \includegraphics[width=30mm]{logo.png}
+#+latex: \end{textblock}
+
+#+latex: \begin{textblock}{65}(14,45) % width, left, top
+#+latex: \vspace{8mm}
+#+latex: \noindent % Needed so left of paragraph lines up
 *Pirilampo BVBA* \\
 Henri Regastraat, 3 \\
 3000 Leuven \\
 VAT BE 0642.789.702
+#+latex: \vspace{8mm}
+#+latex: \end{textblock}
 
-* To
+# * To
 
 # Modèles d'enveloppes à fenêtre :
 # - DL, ou C6/5, pour une feuille A4 pliée en trois dans le sens de la hauteur,
@@ -37,16 +47,18 @@ VAT BE 0642.789.702
 # mm du haut de la page.. (disons 80 pour etre tranquille), et a 95mm du bord
 # gauche..
 
-#+latex: \begin{textblock}{100}(80,50) % width, left, top
+#+latex: \begin{textblock}{90}(95,45) % width, left, top
 #+latex: \textblockcolour{prlp-gray96}
-#+latex: \vspace{4mm}
+#+latex: \vspace{8mm}
 #+latex: \noindent % Needed so left of paragraph lines up
 *LaTeX Dev Club* \\
 Rue des Pompiers, 54 \\
 1200 Bruxelles \\
 VAT BE 0123.456.789
-#+latex: \vspace{4mm}
+#+latex: \vspace{8mm}
 #+latex: \end{textblock}
+
+#+latex: \vspace{65mm}
 
 * Items
 

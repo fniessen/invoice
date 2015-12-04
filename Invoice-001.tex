@@ -31,34 +31,40 @@
 
 \maketitle
 \begin{tikzpicture}[overlay,remember picture]
-\draw ($(current page.north west)!0.3535!(current page.south west)$)--++(0.5cm,0cm);
-\draw ($(current page.north west)!0.7071!(current page.south west)$)--++(0.5cm,0cm);
+\draw [gray] ($(current page.north west)!0.3535!(current page.south west)$)--++(0.5cm,0cm);
+\draw [gray] ($(current page.north west)!0.7071!(current page.south west)$)--++(0.5cm,0cm);
 \end{tikzpicture}
 
-\section*{From}
-\label{sec:orgheadline1}
+\begin{textblock}{40}(14,18) % width, left, top
+\noindent % Needed so left of paragraph lines up
+\includegraphics[width=30mm]{logo.png}
+\end{textblock}
 
+\begin{textblock}{65}(14,45) % width, left, top
+\vspace{8mm}
+\noindent % Needed so left of paragraph lines up
 \textbf{Pirilampo BVBA} \\
 Henri Regastraat, 3 \\
 3000 Leuven \\
 VAT BE 0642.789.702
+\vspace{8mm}
+\end{textblock}
 
-\section*{To}
-\label{sec:orgheadline2}
-
-\begin{textblock}{100}(80,50) % width, left, top
+\begin{textblock}{90}(95,45) % width, left, top
 \textblockcolour{prlp-gray96}
-\vspace{4mm}
+\vspace{8mm}
 \noindent % Needed so left of paragraph lines up
 \textbf{\LaTeX{} Dev Club} \\
 Rue des Pompiers, 54 \\
 1200 Bruxelles \\
 VAT BE 0123.456.789
-\vspace{4mm}
+\vspace{8mm}
 \end{textblock}
 
+\vspace{65mm}
+
 \section*{Items}
-\label{sec:orgheadline3}
+\label{sec:orgheadline1}
 
 \extrarowsep=1mm
 
@@ -75,7 +81,7 @@ Research & Je vous avais prévenu & Timed & 60 & \texteuro{}/hr & 10.0 & 4800.00
 \end{center}
 
 \section*{Amount Due}
-\label{sec:orgheadline4}
+\label{sec:orgheadline2}
 
 \hfill\colorbox{prlp-gray96}{\begin{minipage}{7.5cm}
 \begin{center}
@@ -91,7 +97,7 @@ Research & Je vous avais prévenu & Timed & 60 & \texteuro{}/hr & 10.0 & 4800.00
 \end{minipage}}
 
 \section*{Terms}
-\label{sec:orgheadline5}
+\label{sec:orgheadline3}
 
 Thank you; I really appreciate your business.
 

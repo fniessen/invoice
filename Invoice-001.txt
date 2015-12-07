@@ -50,7 +50,7 @@ VAT BE 0642.789.702
 # https://www.blinksale.com/tour/ !!!!!!!!
 
 #+latex: \begin{textblock}{90}(95,45) % width, left, top
-#+latex: \textblockcolour{prlp-yellow}
+#+latex: \textblockcolour{prlp-ivory}
 #+latex: \vspace{8mm}
 #+latex: \noindent % Needed so left of paragraph lines up
 *LaTeX Dev Club* \\
@@ -71,16 +71,14 @@ VAT BE 0123.456.789
 
 #+latex: \extrarowsep=1mm
 
-#+name: items
 #+ATTR_LaTeX: :environment tabu :align lXlrlrrl
-|              | <60>                                                         |       |      |     |          |           |   |
-| Title of job | Description of job                                           | Type  | Rate |     | Quantity | Sub-total |   |
-|--------------+--------------------------------------------------------------+-------+------+-----+----------+-----------+---|
+#+name: items
+|              | <64>                                                             |       |      |     |          |           |   |
+| Title of job | Description of job                                               | Type  | Rate |     | Quantity | Sub-total |   |
+|--------------+------------------------------------------------------------------+-------+------+-----+----------+-----------+---|
 | Consultancy  | Creation of a billing invoice template without lots of custom coding and scripting | Timed |  480 | \EUR/d |      6.5 | 3120.00   | \EUR |
-|--------------+--------------------------------------------------------------+-------+------+-----+----------+-----------+---|
-| Training     | Creation of a quote template                                 | Fixed |  500 | \EUR   |      0.5 | 240.00    | \EUR |
-|--------------+--------------------------------------------------------------+-------+------+-----+----------+-----------+---|
-| Research     | Creation of a billing invoice template                       | Timed |  480 | \EUR/d |     10.0 | 4800.00   | \EUR |
+|--------------+------------------------------------------------------------------+-------+------+-----+----------+-----------+---|
+| Training     | Creation of a quote template                                     | Fixed |  500 | \EUR   |      1.5 | 720.00    | \EUR |
 #+TBLFM: $7=$6*480;%.2f
 
 # #+latex: \tabureset
@@ -89,12 +87,12 @@ VAT BE 0123.456.789
 
 #+latex: \hfill\colorbox{prlp-gray96}{\begin{minipage}{7.5cm}
 #+ATTR_LaTeX: :environment tabu :align Xrl
-| /Sub-total/  | 3120.00 | \EUR |
+| /Sub-total/  | 3840.00 | \EUR |
 |------------+---------+---|
-| /Tax @ 21%/  |  655.20 | \EUR |
+| /Tax @ 21%/  |  806.40 | \EUR |
 |------------+---------+---|
-| *Amount Due* | 3775.20 | *\EUR* |
-#+TBLFM: @1$2=remote(items,@3$7);%.2f::@2$2=@1*0.21;%.2f::@3$2=vsum(@1..@-1);%.2f
+| *Amount Due* | 4646.40 | *\EUR* |
+#+TBLFM: @1$2=vsum(remote(items,@3$7..@>$7));%.2f::@2$2=@1*0.21;%.2f::@3$2=vsum(@1..@-1);%.2f
 
 #+latex: \end{minipage}}
 

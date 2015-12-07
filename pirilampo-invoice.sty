@@ -2,13 +2,13 @@
 %
 % Copyright (C) 2015 Fabrice Niessen
 
-\ProvidesPackage{pirilampo-invoice}[2015/12/04 v1.0 Pirilampo invoice extesions]
+\ProvidesPackage{pirilampo-invoice}[2015/12/07 v1.0 Pirilampo invoice extensions]
 \NeedsTeXFormat{LaTeX2e}
 
 \definecolor{prlp-gray96}{rgb}{0.95,0.96,0.97} % Background color.
 \definecolor{prlp-gray88}{rgb}{0.85,0.85,0.85}
-\definecolor{prlp-blue}{rgb}{0.00,0.31,0.63}
-\definecolor{prlp-yellow}{rgb}{1.00,1.00,0.94}
+\definecolor{prlp-dodger-blue}{rgb}{0.00,0.31,0.63}
+\definecolor{prlp-ivory}{rgb}{1.00,1.00,0.94}
 
 \usepackage[T1]{fontenc}
 \usepackage[default]{gillius}
@@ -26,7 +26,7 @@
 
 \renewcommand\maketitle{
   \begin{center}
-    \color{prlp-blue}
+    \color{prlp-dodger-blue}
     {\Huge\bfseries\scshape\@title\par}
     \vspace*{2ex}
     {\scshape{}Issued: \@date}

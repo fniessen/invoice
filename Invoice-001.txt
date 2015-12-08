@@ -86,8 +86,8 @@ VAT BE 0123.456.789
 |--------------+------------------------------------------------------------------+-------+------+-----+----------+-----------+---|
 | Consultancy  | Creation of a billing invoice template without lots of custom coding and scripting | Timed |  480 | \EUR/d |      6.5 | 3120.00   | \EUR |
 |--------------+------------------------------------------------------------------+-------+------+-----+----------+-----------+---|
-| Training     | Creation of a quote template                                     | Fixed |  500 | \EUR   |      1.5 | 720.00    | \EUR |
-#+TBLFM: $7=$6*480;%.2f
+| Training     | Creation of a quote template                                     | Fixed |  500 | \EUR   |      1.5 | 750.00    | \EUR |
+#+TBLFM: $7=$4*$6;%.2f
 
 # #+latex: \tabureset
 
@@ -95,12 +95,12 @@ VAT BE 0123.456.789
 
 #+latex: \hfill\colorbox{prlp-gray96}{\begin{minipage}{7.5cm}
 #+ATTR_LaTeX: :environment tabu :align Xrl
-| /Sub-total/  | 3840.00 | \EUR |
-|------------+---------+---|
-| /Tax @ 21%/  |  806.40 | \EUR |
-|------------+---------+---|
-| *Amount Due* | *4646.40* | *\EUR* |
-#+TBLFM: @1$2=vsum(remote(items,@3$7..@>$7));%.2f::@2$2=@1*0.21;%.2f::@3$2=vsum(@1..@-1);*%.2f*
+| /Sub-total/  |         3870.00 | \EUR |
+|------------+-----------------+---|
+| /Tax @ 21%/  |          812.70 | \EUR |
+|------------+-----------------+---|
+| *Amount Due* | *\large{4682.70}* | *\EUR* |
+#+TBLFM: @1$2=vsum(remote(items,@3$7..@>$7));%.2f::@2$2=@1*0.21;%.2f::@3$2=vsum(@1..@-1);*\large{%.2f}*
 
 #+latex: \end{minipage}}
 

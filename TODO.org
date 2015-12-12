@@ -3,6 +3,9 @@
 Exemple de facture bien présentée :
 http://www.inboldsolutions.com/fr/online-invoice-creator/
 
+Positionnement correct des éléments sur une enveloppe (+ fontes autorisées) :
+http://www.royalmail.com/sites/default/files/GuideForClearAddressing_April2013.pdf
+
 ** TODO [#A] Avoir certains titres invisibles en LaTeX
 
 Entre autres, « To » et « Amount Due ».

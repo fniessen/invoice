@@ -25,10 +25,12 @@
 #+latex: \begin{textblock}{65}(14,45) % width, left, top
 #+latex: \vspace{8mm}
 #+latex: \noindent % Needed so left of paragraph lines up
+#+latex: \textcolor{prlp-dodger-blue}{%
 *Pirilampo BVBA* \\
 Henri Regastraat 3 \\
 3000 Leuven \\
 VAT BE 0642.789.702
+#+latex: }
 #+latex: \vspace{8mm}
 #+latex: \end{textblock}
 
@@ -52,7 +54,7 @@ VAT BE 0642.789.702
 
 # https://www.blinksale.com/tour/ !!!!!!!!
 
-#+latex: \begin{textblock}{90}(95,45) % width, left, top
+#+latex: \begin{textblock}{84}(99,45) % width, left, top
 #+latex: \footnotesize\textcolor{prlp-gray50}{%
 Return Address: Pirilampo BVBA -- Henri Regastraat 3 -- 3000 Leuven
 #+latex: }
@@ -64,13 +66,13 @@ Return Address: Pirilampo BVBA -- Henri Regastraat 3 -- 3000 Leuven
 #+latex_header: \usetikzlibrary{shapes,calc}
 #+latex_header: \newcommand{\titlebox}[2]{
 #+latex_header: \begin{tikzpicture}[every text node part/.style={text centered}]
-#+latex_header:     \node[line width=1pt, minimum height=27mm,
+#+latex_header:     \node[line width=1pt, minimum height=25mm,
 #+latex_header:     draw=prlp-light-yellow, text width=#1, rounded corners](rs)
 #+latex_header:     {#2};
 #+latex_header: \end{tikzpicture}}
 
-#+latex: \begin{textblock}{90}(95,49)
-#+latex: \titlebox{8.7cm}{%
+#+latex: \begin{textblock}{84}(98,49)
+#+latex: \titlebox{81mm}{%
 *LaTeX Dev Club* \\
 Rue des Pompiers, 54 \\
 1200 Bruxelles \\

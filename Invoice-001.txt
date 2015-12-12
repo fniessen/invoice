@@ -26,7 +26,7 @@
 #+latex: \vspace{8mm}
 #+latex: \noindent % Needed so left of paragraph lines up
 *Pirilampo BVBA* \\
-Henri Regastraat, 3 \\
+Henri Regastraat 3 \\
 3000 Leuven \\
 VAT BE 0642.789.702
 #+latex: \vspace{8mm}
@@ -52,18 +52,24 @@ VAT BE 0642.789.702
 
 # https://www.blinksale.com/tour/ !!!!!!!!
 
+#+latex: \begin{textblock}{90}(95,45) % width, left, top
+#+latex: \footnotesize\textcolor{prlp-gray50}{%
+Return Address: Pirilampo BVBA -- Henri Regastraat 3 -- 3000 Leuven
+#+latex: }
+#+latex: \end{textblock}
+
 #+latex: \textblockcolour{prlp-ivory} % Should be in the TikZ picture!!!
 
 #+latex_header: \usepackage{tikz}
 #+latex_header: \usetikzlibrary{shapes,calc}
 #+latex_header: \newcommand{\titlebox}[2]{
 #+latex_header: \begin{tikzpicture}[every text node part/.style={text centered}]
-#+latex_header:     \node[line width=1pt, minimum height=3.1cm,
+#+latex_header:     \node[line width=1pt, minimum height=27mm,
 #+latex_header:     draw=prlp-light-yellow, text width=#1, rounded corners](rs)
 #+latex_header:     {#2};
 #+latex_header: \end{tikzpicture}}
 
-#+latex: \begin{textblock}{90}(95,45)
+#+latex: \begin{textblock}{90}(95,49)
 #+latex: \titlebox{8.7cm}{%
 *LaTeX Dev Club* \\
 Rue des Pompiers, 54 \\

@@ -22,7 +22,7 @@
 \usetikzlibrary{shapes,calc}
 \newcommand{\titlebox}[2]{
 \begin{tikzpicture}[every text node part/.style={text centered}]
-\node[line width=1pt, minimum height=3.1cm,
+\node[line width=1pt, minimum height=27mm,
 draw=prlp-light-yellow, text width=#1, rounded corners](rs)
 {#2};
 \end{tikzpicture}}
@@ -53,7 +53,7 @@ draw=prlp-light-yellow, text width=#1, rounded corners](rs)
 \vspace{8mm}
 \noindent % Needed so left of paragraph lines up
 \textbf{Pirilampo BVBA} \\
-Henri Regastraat, 3 \\
+Henri Regastraat 3 \\
 3000 Leuven \\
 VAT BE 0642.789.702
 \vspace{8mm}
@@ -61,9 +61,15 @@ VAT BE 0642.789.702
 
 \sectionfont{\color{prlp-gray50}\scshape}
 
+\begin{textblock}{90}(95,45) % width, left, top
+\footnotesize\textcolor{prlp-gray50}{%
+Return Address: Pirilampo BVBA -- Henri Regastraat 3 -- 3000 Leuven
+}
+\end{textblock}
+
 \textblockcolour{prlp-ivory} % Should be in the TikZ picture!!!
 
-\begin{textblock}{90}(95,45)
+\begin{textblock}{90}(95,49)
 \titlebox{8.7cm}{%
 \textbf{\LaTeX{} Dev Club} \\
 Rue des Pompiers, 54 \\

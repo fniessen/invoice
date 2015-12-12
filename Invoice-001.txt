@@ -32,6 +32,9 @@ VAT BE 0642.789.702
 #+latex: \vspace{8mm}
 #+latex: \end{textblock}
 
+#+latex_header: \usepackage{sectsty}
+#+latex: \sectionfont{\color{prlp-gray50}\scshape}
+
 # * To
 
 # Modèles d'enveloppes à fenêtre :
@@ -55,7 +58,7 @@ VAT BE 0642.789.702
 #+latex_header: \usetikzlibrary{shapes,calc}
 #+latex_header: \newcommand{\titlebox}[2]{
 #+latex_header: \begin{tikzpicture}[every text node part/.style={text centered}]
-#+latex_header:     \node[line width=0.5mm, minimum height=3.1cm,
+#+latex_header:     \node[line width=1pt, minimum height=3.1cm,
 #+latex_header:     draw=prlp-light-yellow, text width=#1, rounded corners](rs)
 #+latex_header:     {#2};
 #+latex_header: \end{tikzpicture}}
@@ -95,21 +98,21 @@ VAT BE 0123.456.789
 
 #+latex: \hfill\colorbox{prlp-gray96}{\begin{minipage}{7.5cm}
 #+ATTR_LaTeX: :environment tabu :align Xrl
-| /Sub-total/  |         3870.00 | \EUR |
-|------------+-----------------+---|
-| /Tax @ 21%/  |          812.70 | \EUR |
-|------------+-----------------+---|
-| *Amount Due* | *\large{4682.70}* | *\EUR* |
+| /Sub-total/        |         3870.00 | \EUR |
+|------------------+-----------------+---|
+| /Tax @ 21%/        |          812.70 | \EUR |
+|------------------+-----------------+---|
+| *Total Amount Due* | *\large{4682.70}* | *\EUR* |
 #+TBLFM: @1$2=vsum(remote(items,@3$7..@>$7));%.2f::@2$2=@1*0.21;%.2f::@3$2=vsum(@1..@-1);*\large{%.2f}*
 
 #+latex: \end{minipage}}
 
-* Terms
+* Notes
+# Visible to Client
 
 *Thank you*; I really appreciate working with you.
 
-Please send payment within *21 days* of receiving this invoice.
+* Terms
 
-# * Notes Visible to Client
-
-#+latex: \vfill
+Please transfer money within *21 days* of receiving this invoice to the account
+BE94 9731 4230 6714.

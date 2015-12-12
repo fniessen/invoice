@@ -17,11 +17,12 @@
 \usepackage{xcolor}
 \usepackage[french, english]{babel}
 \usepackage{pirilampo-invoice}
+\usepackage{sectsty}
 \usepackage{tikz}
 \usetikzlibrary{shapes,calc}
 \newcommand{\titlebox}[2]{
 \begin{tikzpicture}[every text node part/.style={text centered}]
-\node[line width=0.5mm, minimum height=3.1cm,
+\node[line width=1pt, minimum height=3.1cm,
 draw=prlp-light-yellow, text width=#1, rounded corners](rs)
 {#2};
 \end{tikzpicture}}
@@ -57,6 +58,8 @@ Henri Regastraat, 3 \\
 VAT BE 0642.789.702
 \vspace{8mm}
 \end{textblock}
+
+\sectionfont{\color{prlp-gray50}\scshape}
 
 \textblockcolour{prlp-ivory} % Should be in the TikZ picture!!!
 
@@ -97,18 +100,19 @@ Training & Creation of a quote template & Fixed & 500 & \texteuro{} & 1.5 & 750.
 \hline
 \emph{Tax @ 21\%} & 812.70 & \texteuro{}\\
 \hline
-\textbf{Amount Due} & \textbf{\large{4682.70}} & \textbf{\texteuro{}}\\
+\textbf{Total Amount Due} & \textbf{\large{4682.70}} & \textbf{\texteuro{}}\\
 \end{tabu}
 \end{center}
 
 \end{minipage}}
 
-\section*{Terms}
+\section*{Notes}
 \label{sec:orgheadline3}
-
 \textbf{Thank you}; I really appreciate working with you.
 
-Please send payment within \textbf{21~days} of receiving this invoice.
+\section*{Terms}
+\label{sec:orgheadline4}
 
-\vfill
+Please transfer money within \textbf{21~days} of receiving this invoice to the account
+BE94 9731 4230 6714.
 \end{document}

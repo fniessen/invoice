@@ -2,14 +2,17 @@
 %
 % Copyright (C) 2015 Fabrice Niessen
 
-\ProvidesPackage{pirilampo-invoice}[2015/12/07 v1.0 Pirilampo invoice extensions]
+\ProvidesPackage{pirilampo-invoice}[2015/12/12 v1.0 Pirilampo invoice extensions]
 \NeedsTeXFormat{LaTeX2e}
 
 \definecolor{prlp-gray96}{rgb}{0.95,0.96,0.97} % Background color.
 \definecolor{prlp-gray88}{rgb}{0.85,0.85,0.85}
+\definecolor{prlp-gray50}{rgb}{0.50,0.50,0.50}
 \definecolor{prlp-dodger-blue}{rgb}{0.00,0.31,0.63}
-\definecolor{prlp-ivory}{rgb}{1.00,1.00,0.94}
-\definecolor{prlp-light-yellow}{rgb}{0.95,0.93,0.75}
+% \definecolor{prlp-ivory}{rgb}{1.00,1.00,0.94}
+\definecolor{prlp-ivory}{rgb}{1.00,0.97,0.84}
+% \definecolor{prlp-light-yellow}{rgb}{0.95,0.93,0.75}
+\definecolor{prlp-light-yellow}{rgb}{0.92,0.73,0.36}
 
 \usepackage[T1]{fontenc}
 \usepackage[default]{gillius}
@@ -17,11 +20,16 @@
 \usepackage{geometry}
 \geometry{top=1.9cm, bottom=2.0cm, left=1.4cm, right=1.4cm}
 
-\usepackage{nopageno}
+% \usepackage{nopageno}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}                              % Set both header and footer to nothing.
+\renewcommand{\headrulewidth}{0pt}
+\cfoot{\color{prlp-gray50}Pirilampo BVBA - Fabrice Niessen - +32 477-95.73.36 - fni@pirilampo.be}
 
-\usepackage[absolute]{textpos}  % Add `showboxes' to visualize the outline of box
-\setlength{\TPHorizModule}{1mm}  % Set horizontal units of each "tick" used for measurement
-\setlength{\TPVertModule}{1mm}  % Set vertical units of each "tick" used for measurement
+\usepackage[absolute]{textpos}          % Add `showboxes' to visualize the outline of box.
+\setlength{\TPHorizModule}{1mm}         % Set horizontal units of each "tick" used for measurement.
+\setlength{\TPVertModule}{1mm}          % Set vertical units of each "tick" used for measurement.
 
 \setlength{\parindent}{0mm}
 

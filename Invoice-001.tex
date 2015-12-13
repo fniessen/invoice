@@ -73,11 +73,11 @@ Return Address: Pirilampo BVBA -- Henri Regastraat 3 -- 3000 Leuven
 \textblockcolour{prlp-ivory} % Should be in the TikZ picture!!!
 
 \begin{textblock}{84}(98,49)
-\titlebox{81mm}{%
+\titlebox{81mm}{\raggedright%
 \textbf{\LaTeX{} Dev Club} \\
 Rue des Pompiers, 54 \\
 1200 Bruxelles \\
-VAT BE 0123.456.789
+VAT BE 0123.456.789 \\
 }\end{textblock}
 
 \vspace{65mm}
@@ -91,7 +91,7 @@ VAT BE 0123.456.789
 \label{tab:orgtable1}
 
 \begin{tabu}{lXlrlrrl}
-Task & Description & Type & Rate &  & Quantity & Sub-total & \\
+\rowfont[c]{\bfseries}\rowcolor{prlp-gray96} Task & Description & Type & Rate &  & Quantity & Sub-total & \\
 \hline
 Consultancy & Creation of a billing invoice template without lots of custom coding and scripting & Timed & 480 & \texteuro{}/d & 6.5 & 3120.00 & \texteuro{}\\
 \hline

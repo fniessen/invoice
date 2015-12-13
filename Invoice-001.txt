@@ -72,11 +72,11 @@ Return Address: Pirilampo BVBA -- Henri Regastraat 3 -- 3000 Leuven
 #+latex_header: \end{tikzpicture}}
 
 #+latex: \begin{textblock}{84}(98,49)
-#+latex: \titlebox{81mm}{%
+#+latex: \titlebox{81mm}{\raggedright%
 *LaTeX Dev Club* \\
 Rue des Pompiers, 54 \\
 1200 Bruxelles \\
-VAT BE 0123.456.789
+VAT BE 0123.456.789 \\
 #+latex: }\end{textblock}
 
 #+latex: \vspace{65mm}
@@ -94,12 +94,12 @@ VAT BE 0123.456.789
 
 #+ATTR_LaTeX: :environment tabu :align lXlrlrrl
 #+name: items
-|             | <64>                                                             |       |      |     |          |           |   |
-| Task        | Description                                                      | Type  | Rate |     | Quantity | Sub-total |   |
-|-------------+------------------------------------------------------------------+-------+------+-----+----------+-----------+---|
-| Consultancy | Creation of a billing invoice template without lots of custom coding and scripting | Timed |  480 | \EUR/d |      6.5 | 3120.00   | \EUR |
-|-------------+------------------------------------------------------------------+-------+------+-----+----------+-----------+---|
-| Training    | Creation of a quote template                                     | Fixed |  500 | \EUR   |      1.5 | 750.00    | \EUR |
+|                                                   | <64>                                                             |       |      |     |          |           |   |
+| \rowfont[c]{\bfseries}\rowcolor{prlp-gray96} Task | Description                                                      | Type  | Rate |     | Quantity | Sub-total |   |
+|---------------------------------------------------+------------------------------------------------------------------+-------+------+-----+----------+-----------+---|
+| Consultancy                                       | Creation of a billing invoice template without lots of custom coding and scripting | Timed |  480 | \EUR/d |      6.5 | 3120.00   | \EUR |
+|---------------------------------------------------+------------------------------------------------------------------+-------+------+-----+----------+-----------+---|
+| Training                                          | Creation of a quote template                                     | Fixed |  500 | \EUR   |      1.5 | 750.00    | \EUR |
 #+TBLFM: $7=$4*$6;%.2f
 
 # #+latex: \tabureset

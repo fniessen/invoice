@@ -81,6 +81,8 @@ VAT BE 0123.456.789
 
 #+latex: \vspace{65mm}
 
+#+latex_header: \usepackage{aurical}
+
 * Items
 
 # #+ATTR_LaTeX: :environment longtabu :align lXrr
@@ -92,15 +94,22 @@ VAT BE 0123.456.789
 
 #+ATTR_LaTeX: :environment tabu :align lXlrlrrl
 #+name: items
-|              | <64>                                                             |       |      |     |          |           |   |
-| Title of job | Description of job                                               | Type  | Rate |     | Quantity | Sub-total |   |
-|--------------+------------------------------------------------------------------+-------+------+-----+----------+-----------+---|
-| Consultancy  | Creation of a billing invoice template without lots of custom coding and scripting | Timed |  480 | \EUR/d |      6.5 | 3120.00   | \EUR |
-|--------------+------------------------------------------------------------------+-------+------+-----+----------+-----------+---|
-| Training     | Creation of a quote template                                     | Fixed |  500 | \EUR   |      1.5 | 750.00    | \EUR |
+|             | <64>                                                             |       |      |     |          |           |   |
+| Task        | Description                                                      | Type  | Rate |     | Quantity | Sub-total |   |
+|-------------+------------------------------------------------------------------+-------+------+-----+----------+-----------+---|
+| Consultancy | Creation of a billing invoice template without lots of custom coding and scripting | Timed |  480 | \EUR/d |      6.5 | 3120.00   | \EUR |
+|-------------+------------------------------------------------------------------+-------+------+-----+----------+-----------+---|
+| Training    | Creation of a quote template                                     | Fixed |  500 | \EUR   |      1.5 | 750.00    | \EUR |
 #+TBLFM: $7=$4*$6;%.2f
 
 # #+latex: \tabureset
+
+# Tasks from FreshBooks:
+# - Client Meeting
+# - Conceptual
+# - Design
+# - Development
+# - Research
 
 * Amount Due
 
@@ -118,7 +127,9 @@ VAT BE 0123.456.789
 * Notes
 # Visible to Client
 
+#+latex: {\Fontskrivan
 *Thank you*; I really appreciate working with you.
+#+latex: }
 
 * Terms
 

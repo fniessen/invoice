@@ -11,20 +11,26 @@
 #+LaTeX_HEADER: \usepackage{pirilampo-invoice}
 
 #+latex: \begin{tikzpicture}[overlay,remember picture]
-#+latex: \draw [gray] ($(current page.north west)!0.3535!(current page.south west)$)--++(0.5cm,0cm);
-#+latex: \draw [gray] ($(current page.north west)!0.7071!(current page.south west)$)--++(0.5cm,0cm);
+#+latex: \draw [gray] ($(current page.north west)!0.3703!(current page.south west)$)--++(0.5cm,0cm); % 110 from top
+#+latex: \draw [gray] ($(current page.north west)!0.7239!(current page.south west)$)--++(0.5cm,0cm); % 215 from top
+# #+latex: \draw [gray] ($(current page.north west)!0.1481!(current page.south west)$)--++(19cm,0cm); % 44 from top
+# #+latex: \draw [gray] ($(current page.north west)!0.2088!(current page.south west)$)--++(19cm,0cm); % 62 from top
+# #+latex: \draw [gray] ($(current page.north west)!0.2694!(current page.south west)$)--++(19cm,0cm); % 80 from top
+# #+latex: \draw [gray] ($(current page.north west)!0.4667!(current page.north east)$)--++(0cm,-80mm); % 98 from left
+# #+latex: \draw [gray] ($(current page.north west)!0.6857!(current page.north east)$)--++(0cm,-80mm); % 144 from left
+# #+latex: \draw [gray] ($(current page.north west)!0.9048!(current page.north east)$)--++(0cm,-80mm); % 190 from left
 #+latex: \end{tikzpicture}
 
 # * From
 
 #+latex: \begin{textblock}{40}(14,18) % width, left, top
-#+latex: \noindent % Needed so left of paragraph lines up
+#+latex: \noindent                      % Needed so left of paragraph lines up.
 #+latex:    \includegraphics[width=30mm]{logo.png}
 #+latex: \end{textblock}
 
-#+latex: \begin{textblock}{65}(14,45) % width, left, top
+#+latex: \begin{textblock}{65}(14,46) % width, left, top
 #+latex: \vspace{8mm}
-#+latex: \noindent % Needed so left of paragraph lines up
+#+latex: \noindent                      % Needed so left of paragraph lines up.
 #+latex: \textcolor{prlp-dodger-blue}{%
 *Pirilampo BVBA* \\
 Henri Regastraat 3 \\
@@ -54,8 +60,8 @@ VAT BE 0642.789.702
 
 # https://www.blinksale.com/tour/ !!!!!!!!
 
-#+latex: \begin{textblock}{84}(99,45) % width, left, top
-#+latex: \footnotesize\textcolor{prlp-gray50}{%
+#+latex: \begin{textblock}{84}(106,46) % width, left, top
+#+latex: \scriptsize\textcolor{prlp-gray50}{%
 Return Address: Pirilampo BVBA -- Henri Regastraat 3 -- 3000 Leuven
 #+latex: }
 #+latex: \end{textblock}
@@ -71,15 +77,15 @@ Return Address: Pirilampo BVBA -- Henri Regastraat 3 -- 3000 Leuven
 #+latex_header:     {#2};
 #+latex_header: \end{tikzpicture}}
 
-#+latex: \begin{textblock}{84}(98,49)
-#+latex: \titlebox{81mm}{\raggedright%
+#+latex: \begin{textblock}{78}(105,49) % width, left, top
+#+latex: \titlebox{75mm}{\raggedright%
 *LaTeX Dev Club* \\
 Rue des Pompiers, 54 \\
 1200 Bruxelles \\
 VAT BE 0123.456.789 \\
 #+latex: }\end{textblock}
 
-#+latex: \vspace{65mm}
+#+latex: \vspace{66mm}
 
 #+latex_header: \usepackage{aurical}
 
@@ -94,12 +100,12 @@ VAT BE 0123.456.789 \\
 
 #+ATTR_LaTeX: :environment tabu :align lXlrlrrl
 #+name: items
-|                                                   | <64>                                                             |       |      |     |          |           |   |
-| \rowfont[c]{\bfseries}\rowcolor{prlp-gray96} Task | Description                                                      | Type  | Rate |     | Quantity | Sub-total |   |
-|---------------------------------------------------+------------------------------------------------------------------+-------+------+-----+----------+-----------+---|
-| Consultancy                                       | Creation of a billing invoice template without lots of custom coding and scripting | Timed |  480 | \EUR/d |      6.5 | 3120.00   | \EUR |
-|---------------------------------------------------+------------------------------------------------------------------+-------+------+-----+----------+-----------+---|
-| Training                                          | Creation of a quote template                                     | Fixed |  500 | \EUR   |      1.5 | 750.00    | \EUR |
+|                                                | <64>                                                             |       |      |     |          |           |   |
+| \rowfont{\bfseries}\rowcolor{prlp-gray96} Task | Description                                                      | Type  | Rate |     | Quantity | Sub-total |   |
+|------------------------------------------------+------------------------------------------------------------------+-------+------+-----+----------+-----------+---|
+| Consultancy                                    | Creation of a billing invoice template without lots of custom coding and scripting | Timed |  480 | \EUR/d |      6.5 | 3120.00   | \EUR |
+|------------------------------------------------+------------------------------------------------------------------+-------+------+-----+----------+-----------+---|
+| Training                                       | Creation of a quote template                                     | Fixed |  500 | \EUR   |      1.5 | 750.00    | \EUR |
 #+TBLFM: $7=$4*$6;%.2f
 
 # #+latex: \tabureset
@@ -122,13 +128,16 @@ VAT BE 0123.456.789 \\
 | *Total Amount Due* | *\large{4682.70}* | *\EUR* |
 #+TBLFM: @1$2=vsum(remote(items,@3$7..@>$7));%.2f::@2$2=@1*0.21;%.2f::@3$2=vsum(@1..@-1);*\large{%.2f}*
 
+# Optionally, before "Total Amount Due":
+# Amount Paid: -0.00 \EUR
+
 #+latex: \end{minipage}}
 
 * Notes
 # Visible to Client
 
-#+latex: {\Fontskrivan
-*Thank you*; I really appreciate working with you.
+#+latex: {\Fontskrivan\large
+*Thank you!*  I really appreciate working with you.
 #+latex: }
 
 * Terms

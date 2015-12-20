@@ -41,18 +41,19 @@ draw=prlp-light-yellow, text width=#1, rounded corners](rs)
 
 \maketitle
 \begin{tikzpicture}[overlay,remember picture]
-\draw [gray] ($(current page.north west)!0.3535!(current page.south west)$)--++(0.5cm,0cm);
-\draw [gray] ($(current page.north west)!0.7071!(current page.south west)$)--++(0.5cm,0cm);
+\draw [gray] ($(current page.north west)!0.3703!(current page.south west)$)--++(0.5cm,0cm); % 110 from top
+\draw [gray] ($(current page.north west)!0.7239!(current page.south west)$)--++(0.5cm,0cm); % 215 from top
+
 \end{tikzpicture}
 
 \begin{textblock}{40}(14,18) % width, left, top
-\noindent % Needed so left of paragraph lines up
+\noindent                      % Needed so left of paragraph lines up.
 \includegraphics[width=30mm]{logo.png}
 \end{textblock}
 
-\begin{textblock}{65}(14,45) % width, left, top
+\begin{textblock}{65}(14,46) % width, left, top
 \vspace{8mm}
-\noindent % Needed so left of paragraph lines up
+\noindent                      % Needed so left of paragraph lines up.
 \textcolor{prlp-dodger-blue}{%
 \textbf{Pirilampo BVBA} \\
 Henri Regastraat 3 \\
@@ -64,23 +65,23 @@ VAT BE 0642.789.702
 
 \sectionfont{\color{prlp-gray50}\scshape}
 
-\begin{textblock}{84}(99,45) % width, left, top
-\footnotesize\textcolor{prlp-gray50}{%
+\begin{textblock}{84}(106,46) % width, left, top
+\scriptsize\textcolor{prlp-gray50}{%
 Return Address: Pirilampo BVBA -- Henri Regastraat 3 -- 3000 Leuven
 }
 \end{textblock}
 
 \textblockcolour{prlp-ivory} % Should be in the TikZ picture!!!
 
-\begin{textblock}{84}(98,49)
-\titlebox{81mm}{\raggedright%
+\begin{textblock}{78}(105,49) % width, left, top
+\titlebox{75mm}{\raggedright%
 \textbf{\LaTeX{} Dev Club} \\
 Rue des Pompiers, 54 \\
 1200 Bruxelles \\
 VAT BE 0123.456.789 \\
 }\end{textblock}
 
-\vspace{65mm}
+\vspace{66mm}
 
 \section*{Items}
 \label{sec:orgheadline1}
@@ -91,7 +92,7 @@ VAT BE 0123.456.789 \\
 \label{tab:orgtable1}
 
 \begin{tabu}{lXlrlrrl}
-\rowfont[c]{\bfseries}\rowcolor{prlp-gray96} Task & Description & Type & Rate &  & Quantity & Sub-total & \\
+\rowfont{\bfseries}\rowcolor{prlp-gray96} Task & Description & Type & Rate &  & Quantity & Sub-total & \\
 \hline
 Consultancy & Creation of a billing invoice template without lots of custom coding and scripting & Timed & 480 & \texteuro{}/d & 6.5 & 3120.00 & \texteuro{}\\
 \hline
@@ -117,8 +118,8 @@ Training & Creation of a quote template & Fixed & 500 & \texteuro{} & 1.5 & 750.
 
 \section*{Notes}
 \label{sec:orgheadline3}
-{\Fontskrivan
-\textbf{Thank you}; I really appreciate working with you.
+{\Fontskrivan\large
+\textbf{Thank you!}  I really appreciate working with you.
 }
 
 \section*{Terms}

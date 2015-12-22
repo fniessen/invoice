@@ -45,21 +45,6 @@ VAT BE 0642.789.702
 
 # * To
 
-# Modèles d'enveloppes à fenêtre :
-# - DL, ou C6/5, pour une feuille A4 pliée en trois dans le sens de la hauteur,
-# - C5/6, également pour une feuille A4 pliée en trois dans le sens de la hauteur,
-#   mais légèrement plus grand que le précédent.
-
-# Une fenetre d'enveloppe format DL fait 35 ou 45 mm de hauteur sur 100 mm de
-# largeur. Elle est positionnee a 20x20mm du bord inferieur droit
-#
-# Sachant que l'on plie la feuille A4 en 3, que le premier plis est a 105 du
-# haut de la page, il faut donc que la derniere ligne de votre adresse soit a 85
-# mm du haut de la page.. (disons 80 pour etre tranquille), et a 95mm du bord
-# gauche..
-
-# https://www.blinksale.com/tour/ !!!!!!!!
-
 #+latex: \begin{textblock}{84}(106,46) % width, left, top
 #+latex: \scriptsize\textcolor{prlp-gray50}{%
 Return Address: Pirilampo BVBA -- Henri Regastraat 3 -- 3000 Leuven
